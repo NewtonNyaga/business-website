@@ -1,0 +1,12 @@
+/* Logo Styling */
+.logo img {
+    height: 100px; /* Adjust the height */
+    width: 150%;  /* Maintain aspect ratio */
+    margin: 0px; /* Add some spacing around the logo */
+    transition: transform 0.3s ease; /* Add a hover animation */
+}
+
+/* Optional: Add hover effect to the logo */
+.logo img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}

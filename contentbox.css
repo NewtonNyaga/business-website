@@ -1,0 +1,135 @@
+/* Content Section */
+.content {
+    padding: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Container for Objective, Mission, and Vision */
+.info-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.info-box.animate {
+    opacity: 1;
+}
+
+/* Individual Info Item */
+.info-item {
+    flex: 1;
+    padding: 30px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Gradient background */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.info-item:hover {
+    transform: translateY(-5px); /* Hover effect for a slight lift */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    background: linear-gradient(145deg, #ffffff, #e0e0e0); /* Subtle background change */
+}
+
+.info-item.animate-item-0 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+.info-item.animate-item-1 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+
+.info-item.animate-item-2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.7s;
+}
+
+.info-item h1 {
+    margin-bottom: 10px;
+    font-size: 26px; /* Larger font size for the headings */
+    font-weight: 600;
+    color: #333333; /* Darker color for headings */
+}
+
+.info-item p {
+    font-size: 16px;
+    color: #666666; /* Lighter color for text */
+    line-height: 1.6;
+}
+
+/* Icons */
+.info-item i {
+    font-size: 30px; /* Icon size */
+    margin-right: 15px; /* Space between icon and title */
+    color: #23f308; /* Color for icons */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for animations */
+}
+
+/* Hover Effect for Icons */
+.info-item:hover i {
+    transform: scale(1.2) rotate(15deg); /* Slight scale and rotation on hover */
+    color: #1d05f5; /* Change icon color when hovered */
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(0); /* Start at normal position */
+    }
+    30% {
+        transform: translateY(-10px); /* Move up slightly */
+    }
+    50% {
+        transform: translateY(0); /* Return to normal position */
+    }
+    70% {
+        transform: translateY(-5px); /* Move up slightly less */
+    }
+    100% {
+        transform: translateY(0); /* Return to normal position */
+    }
+}
+
+/* Get Started Button */
+.get-started {
+    background: linear-gradient(135deg, #21f306, #ff9a8b); /* Vibrant gradient */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 25px; /* Rounded edges */
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-top: 20px; /* Space from the hero section */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Horizontally center */
+    animation: bounce 1.5s ease-in-out infinite; /* Continuous bouncing animation */
+}
+
+/* Hover Effect (optional) */
+.get-started:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow for a glowing effect */
+    background: linear-gradient(135deg, #778ccf, #3c0ee0); /* Reverse gradient on hover */
+}
+
+/* Add spacing between sections */
+section {
+    margin-top: 100px; /* Add space between the hero section and the content */
+}
+
